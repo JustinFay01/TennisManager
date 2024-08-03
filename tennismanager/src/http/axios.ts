@@ -1,7 +1,7 @@
 import a, { AxiosError } from "axios";
 
 const axios = a.create({
-  baseURL: `${process.env.NEXT_PUBLIC_API_URL}/api`,
+  baseURL: `${import.meta.env.VITE_API_URL}/api`,
   headers: {},
 });
 
