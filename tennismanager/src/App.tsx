@@ -1,4 +1,7 @@
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { MainLayout } from "./layout/main-layout";
+import { Outlet } from "react-router-dom";
 
 export const defaultTheme = createTheme({
   palette: {
@@ -24,12 +27,18 @@ export const defaultTheme = createTheme({
   },
 });
 
+const queryClient = new QueryClient();
+
 const App = () => {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <CssBaseline />
-      <div>Hello, World!</div>
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider theme={defaultTheme}>
+        <CssBaseline />
+        <MainLayout>
+          <Outlet />
+        </MainLayout>
+      </ThemeProvider>
+    </QueryClientProvider>
   );
 };
 
