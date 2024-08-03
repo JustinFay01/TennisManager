@@ -8,13 +8,11 @@ export interface IUser {
 
 }
 
-export type Coach = IUser & {
-};
+export type Coach = IUser;
 
 export interface Customer extends IUser{
   sessions?: Session[];
-};
-
+}
 
 export type Package = {
   id: string;
@@ -33,7 +31,7 @@ export interface Session {
   description?: string;
   type: keyof typeof SessionType;
   coach?: Coach;
-};
+}
 
 export interface PaginatedResponse<T> {
   items: T[];
@@ -42,14 +40,6 @@ export interface PaginatedResponse<T> {
   totalItems: number;
   totalPages: number;
 }
-
-export type Alert = {
-  title: string;
-  message: string;
-  severity: "error" | "warning" | "info" | "success";
-  timeout?: number;
-};
-
 
 export class SessionType {
   static readonly Event = "event";

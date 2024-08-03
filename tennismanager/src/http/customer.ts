@@ -1,4 +1,4 @@
-import axios, { handleError } from "./axios";
+import axios from "./axios";
 import { Customer, PaginatedResponse } from "../types";
 
 const entityUrl = "/customers";

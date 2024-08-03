@@ -1,5 +1,5 @@
-import axios, { handleError } from "./axios";
-import { Coach, PaginatedResponse } from "../types";
+import axios from "./axios";
+import { Coach } from "../types";
 const entityUrl = "/coaches";
 
 export const getCoachesList = async () => {

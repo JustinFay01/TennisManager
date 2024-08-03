@@ -1,4 +1,4 @@
-import axios, { handleError } from "./axios";
+import axios from "./axios";
 import { PaginatedResponse, Session, SessionType } from "../types";
 
 const entityUrl = "/sessions";
@@ -51,7 +51,7 @@ export const createSession = async (
 
 export const addCustomersToSession = async (
   sessionIds: string[],
-  customersAndPrices: Object
+  customersAndPrices: { customerId: string; price: number }[]
 ) => {
   return axios.patch(`${entityUrl}/add-customers`, {
     sessionIds,
