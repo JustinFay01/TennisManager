@@ -28,7 +28,7 @@ export const defaultTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
+    fontFamily: "Lato, sans-serif",
   },
 });
 
