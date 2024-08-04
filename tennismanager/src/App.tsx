@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { MainLayout } from "./layout/main-layout";
 import { Outlet } from "react-router-dom";
 
+// eslint-disable-next-line
 export const defaultTheme = createTheme({
   palette: {
     background: {

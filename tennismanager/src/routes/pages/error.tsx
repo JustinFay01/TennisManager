@@ -1,6 +1,6 @@
 import DefaultCard from "../../components/base/default-card";
 import Image from "../../assets/230130093125-06-novak-djokovic-emotional.webp";
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
 
 export const Error = () => {
@@ -22,10 +22,13 @@ export const Error = () => {
           flexDirection: "column",
         }}
       >
-        <h1>404 Not Found</h1>
+        <Typography variant="h1">404</Typography>
+        <Typography variant="h6">
+          Sorry, The page you are looking for does not exist.
+        </Typography>
         <div
           style={{
-            padding: "1rem",
+            padding: "3rem",
           }}
         >
           <Button variant="contained" component={NavLink} to="/">
