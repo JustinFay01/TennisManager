@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Customers } from "./pages/customers";
+import { Error } from "./pages/error";
 import App from "../App";
 
 export const router = createBrowserRouter([
@@ -8,8 +9,12 @@ export const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/customers",
+        path: "/",
         element: <Customers />,
+      },
+      {
+        path: "*",
+        element:<Error />
       },
     ],
   },
