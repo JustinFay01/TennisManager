@@ -3,9 +3,9 @@ import "./main-layout.css";
 
 export const MainLayout = (props: { children: React.ReactNode }) => {
   return (
-    <div>
+    <div className="main">
       <MainNav />
-      <main className="main">{props.children}</main>
+      <main className="main-content">{props.children}</main>
     </div>
   );
 };

@@ -6,17 +6,18 @@ import { Outlet } from "react-router-dom";
 export const defaultTheme = createTheme({
   palette: {
     background: {
-      default: "#F2F2F7",
+      default: "#EEF0F2",
       paper: "#ffffff",
     },
     text: {
-      primary: "#808080",
+      primary: "#3b3b3b", // Matches prefers-color-scheme: light text color
+      secondary: "#002D04", // Optional: matches the initial primary text color
     },
     primary: {
-      light: "#FAFAFF", //300
-      main: "#A38D5A", //500
-      dark: "#002D04", //900
-      contrastText: "#000000",
+      light: "#FAFAFF", // 300
+      main: "#002D04", // 500
+      dark: "#A38D5A", // 900
+      contrastText: "#fafaff",
     },
     secondary: {
       light: "#FAFAFF",
@@ -24,6 +25,9 @@ export const defaultTheme = createTheme({
       dark: "#002D04",
       contrastText: "#000000",
     },
+  },
+  typography: {
+    fontFamily: "Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
   },
 });
 
