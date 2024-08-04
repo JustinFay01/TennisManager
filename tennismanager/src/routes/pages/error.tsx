@@ -1,20 +1,43 @@
 import DefaultCard from "../../components/base/default-card";
 import Image from "../../assets/230130093125-06-novak-djokovic-emotional.webp";
-import { Divider } from "@mui/material";
+import { Button } from "@mui/material";
 
 export const Error = () => {
   return (
-    <DefaultCard
+    <div
       style={{
-        height: "100vh",
+        padding: "1rem",
       }}
     >
-      <div>
-        <h1>404</h1>
-        <p>Sorry, the page you are looking for does not exist.</p>
-        <Divider />
-        <img src={Image} alt="Not found" />
-      </div>
-    </DefaultCard>
+      <DefaultCard
+        style={{
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <div style={{ flex: 1 }}>
+          <h1 style={{ textAlign: "center" }}>404 Not Found</h1>
+          <Button
+            variant="contained"
+            style={{
+              display: "block",
+              margin: "0 auto",
+              padding: "0.5rem 1rem",
+            }}
+          >
+            <a href="/">Go Back</a>
+          </Button>
+          <img
+            src={Image}
+            alt="Not Found"
+            style={{
+              objectFit: "cover",
+              paddingTop: "1rem",
+            }}
+          />
+        </div>
+      </DefaultCard>
+    </div>
   );
 };

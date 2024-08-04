@@ -1,6 +1,5 @@
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
 
 interface DefaultCardProps {
   children: React.ReactNode;
@@ -21,12 +20,10 @@ export default function DefaultCard({
       borderRadius={borderRadius}
       component={Card}
       sx={{
-        width: "100%",
-        minWidth: "300px",
         ...style,
       }}
     >
-      <CardContent>{children}</CardContent>
+      {children}
     </Box>
   );
 }

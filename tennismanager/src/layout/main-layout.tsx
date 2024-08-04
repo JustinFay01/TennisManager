@@ -1,12 +1,11 @@
 import { MainNav } from "./main-nav/main-nav";
+import "./main-layout.css";
 
 export const MainLayout = (props: { children: React.ReactNode }) => {
   return (
-    <>
+    <div>
       <MainNav />
-      <div style={{ marginLeft: "125px", padding: "1rem" }}>
-        {props.children}
-      </div>
-    </>
+      <main className="main">{props.children}</main>
+    </div>
   );
 };

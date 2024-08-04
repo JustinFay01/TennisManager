@@ -1,0 +1,21 @@
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  #root {
+    height: 100%;
+  }
+  
+  div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  main {
+    flex: 1;
+    overflow: auto;
+    margin-left: 120px;
+  }

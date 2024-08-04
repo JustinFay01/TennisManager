@@ -10,19 +10,19 @@ export const defaultTheme = createTheme({
       paper: "#ffffff",
     },
     text: {
-      primary: "#717171",
+      primary: "#808080",
     },
     primary: {
-      light: "#A44DC8", //300
-      main: "#7D00B0", //500
-      dark: "#4D0087", //900
-      contrastText: "#FFF",
+      light: "#FAFAFF", //300
+      main: "#A38D5A", //500
+      dark: "#002D04", //900
+      contrastText: "#000000",
     },
     secondary: {
-      light: "#FE7E7E",
-      main: "#FE4747",
-      dark: "#FD2020",
-      contrastText: "#FFF",
+      light: "#FAFAFF",
+      main: "#A38D5A",
+      dark: "#002D04",
+      contrastText: "#000000",
     },
   },
 });
