@@ -15,11 +15,13 @@
 
 a {
   font-weight: 500;
-  color: #A38D5A;
+  color: #002D04;
   text-decoration: inherit;
+  transition: color 0.15s ease-in;
+  border: 1px solid transparent;
 }
 a:hover {
-  color: #002D04;
+  color: #A38D5A;
 }
 
 body {
@@ -37,34 +39,3 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #002D04;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #A38D5A;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #002D04;
-    background-color: #EEF0F2; /* Matches default theme background color */
-  }
-  a:hover {
-    color: #002D04;
-  }
-  button {
-    background-color: #002D04;
-  }
-}

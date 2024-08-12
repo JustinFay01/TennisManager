@@ -31,7 +31,14 @@ export const Error = () => {
             padding: "3rem",
           }}
         >
-          <Button variant="contained" component={NavLink} to="/">
+          <Button
+            variant="contained"
+            component={NavLink}
+            to="/"
+            style={{
+              color: "white",
+            }}
+          >
             Go Back Home
           </Button>
         </div>
