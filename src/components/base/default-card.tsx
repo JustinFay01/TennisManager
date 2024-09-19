@@ -3,6 +3,7 @@ import Card from "@mui/material/Card";
 
 interface DefaultCardProps {
   children: React.ReactNode;
+  className?: string;
   style?: React.CSSProperties;
   boxShadow?: number;
   borderRadius?: number;
@@ -11,6 +12,7 @@ interface DefaultCardProps {
 export default function DefaultCard({
   children,
   style,
+  className,
   boxShadow = 5,
   borderRadius = 2,
 }: DefaultCardProps) {
@@ -19,6 +21,7 @@ export default function DefaultCard({
       boxShadow={boxShadow}
       borderRadius={borderRadius}
       component={Card}
+      className={className}
       sx={{
         ...style,
       }}
