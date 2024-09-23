@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Customers } from "./pages/customers";
-import { Error } from "./pages/error";
-import App from "../App";
+import { Customers } from "./routes/pages/customers";
+import { Error } from "./routes/pages/error";
+import App from "./App";
 
 export const router = createBrowserRouter([
   {

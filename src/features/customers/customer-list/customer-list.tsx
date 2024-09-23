@@ -11,7 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
-import { useCustomers } from "../../../http/queries/use-customers";
+import { useCustomers } from "../../../api/queries/use-customers";
 import DefaultCard from "../../base/default-card";
 import "./customer-list.css";
 

@@ -1,6 +1,6 @@
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import { QueryClient, QueryClientProvider } from "react-query";
-import { MainLayout } from "./layout/main-layout";
+import { MainLayout } from "../components/layouts/main-layout";
 import { Outlet } from "react-router-dom";
 import { ReactQueryDevtools } from "react-query/devtools";
 
