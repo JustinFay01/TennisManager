@@ -1,8 +1,8 @@
 import { Button, Typography } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 
-import Image from '../../assets/230130093125-06-novak-djokovic-emotional.webp';
-import DefaultCard from '../../components/base/default-card';
+import Image from '@/assets/230130093125-06-novak-djokovic-emotional.webp';
+import DefaultCard from '@/components/base/default-card';
 
 export const Error = () => {
   return (

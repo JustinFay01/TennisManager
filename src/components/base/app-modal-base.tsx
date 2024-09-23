@@ -6,7 +6,6 @@ import {
   CircularProgress,
   Grow,
 } from '@mui/material';
-import React, { useEffect } from 'react';
 
 interface AppModalBaseProps {
   isOpen: boolean;
@@ -23,14 +22,13 @@ export const AppModalBase = ({
   children,
   style,
   onClose,
-  resetFormState,
 }: AppModalBaseProps) => {
   // Reset form state on close
-  useEffect(() => {
-    if (!isOpen) {
-      resetFormState();
-    }
-  }, [isOpen]);
+  // useEffect(() => {
+  //   if (!isOpen) {
+  //     resetFormState();
+  //   }
+  // }, [isOpen]);
 
   const createForm = (
     <Backdrop
