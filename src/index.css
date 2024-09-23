@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(0, 0, 0, 0.87); /* Matches default theme primary text color */
-  background-color: #EEF0F2;
+  background-color: #eef0f2;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,13 +15,13 @@
 
 a {
   font-weight: 500;
-  color: #002D04;
+  color: #002d04;
   text-decoration: inherit;
   transition: color 0.15s ease-in;
   border: 1px solid transparent;
 }
 a:hover {
-  color: #A38D5A;
+  color: #a38d5a;
 }
 
 body {
@@ -30,12 +30,11 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #EEF0F2; /* Matches default theme background color */
-  color: #002D04; /* Matches prefers-color-scheme: light text color */
+  background-color: #eef0f2; /* Matches default theme background color */
+  color: #002d04; /* Matches prefers-color-scheme: light text color */
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-

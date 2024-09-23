@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import {
   Backdrop,
   Box,
@@ -6,7 +5,8 @@ import {
   CardContent,
   CircularProgress,
   Grow,
-} from "@mui/material";
+} from '@mui/material';
+import React, { useEffect, useState } from 'react';
 
 interface AppModalBaseProps {
   isOpen: boolean;
@@ -51,7 +51,7 @@ export const AppModalBase = ({
         >
           <Card
             style={{
-              padding: "1rem",
+              padding: '1rem',
               borderRadius: 10,
             }}
             onClick={(e) => {
@@ -71,7 +71,7 @@ export const AppModalBase = ({
         <>
           <Backdrop
             sx={{
-              color: "#fff",
+              color: '#fff',
               zIndex: (theme) => theme.zIndex.drawer + 1,
             }}
             open={isOpen}

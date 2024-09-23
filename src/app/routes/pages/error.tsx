@@ -1,25 +1,26 @@
-import DefaultCard from "../../components/base/default-card";
-import Image from "../../assets/230130093125-06-novak-djokovic-emotional.webp";
-import { Button, Typography } from "@mui/material";
-import { NavLink } from "react-router-dom";
+import { Button, Typography } from '@mui/material';
+import { NavLink } from 'react-router-dom';
+
+import Image from '../../assets/230130093125-06-novak-djokovic-emotional.webp';
+import DefaultCard from '../../components/base/default-card';
 
 export const Error = () => {
   return (
     <div
       style={{
-        padding: "4rem",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        padding: '4rem',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
       <DefaultCard
         style={{
-          textAlign: "center",
-          display: "flex",
-          width: "100%",
-          height: "100%",
-          flexDirection: "column",
+          textAlign: 'center',
+          display: 'flex',
+          width: '100%',
+          height: '100%',
+          flexDirection: 'column',
         }}
       >
         <Typography variant="h1">404</Typography>
@@ -28,7 +29,7 @@ export const Error = () => {
         </Typography>
         <div
           style={{
-            padding: "3rem",
+            padding: '3rem',
           }}
         >
           <Button
@@ -36,7 +37,7 @@ export const Error = () => {
             component={NavLink}
             to="/"
             style={{
-              color: "white",
+              color: 'white',
             }}
           >
             Go Back Home

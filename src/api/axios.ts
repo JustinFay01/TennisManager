@@ -1,4 +1,4 @@
-import a, { AxiosError } from "axios";
+import a, { AxiosError } from 'axios';
 
 const axios = a.create({
   baseURL: `${import.meta.env.VITE_API_URL}/api`,
@@ -13,4 +13,3 @@ export const handleError = (error: Error | AxiosError) => {
 };
 
 export default axios;
-  

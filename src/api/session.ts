@@ -1,7 +1,8 @@
-import axios from "./axios";
-import { PaginatedResponse, Session, SessionType } from "../types";
+import { PaginatedResponse, Session, SessionType } from '../types';
 
-const entityUrl = "/sessions";
+import axios from './axios';
+
+const entityUrl = '/sessions';
 
 export const getSessionsList = async (params: {
   pageNumber: number;
@@ -33,7 +34,7 @@ export const createSession = async (
   date: string,
   description?: string,
   coachId?: string,
-  customerAndPrices?: { customerId: string; price: number }[]
+  customerAndPrices?: { customerId: string; price: number }[],
 ) => {
   return axios
     .post(`${entityUrl}/create`, {
@@ -51,10 +52,10 @@ export const createSession = async (
 
 export const addCustomersToSession = async (
   sessionIds: string[],
-  customersAndPrices: { customerId: string; price: number }[]
+  customersAndPrices: { customerId: string; price: number }[],
 ) => {
   return axios.patch(`${entityUrl}/add-customers`, {
     sessionIds,
     customersAndPrices,
   });
-}
+};

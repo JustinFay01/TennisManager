@@ -1,7 +1,8 @@
-import axios from "./axios";
-import { Customer, PaginatedResponse } from "../types";
+import { Customer, PaginatedResponse } from '../types';
 
-const entityUrl = "/customers";
+import axios from './axios';
+
+const entityUrl = '/customers';
 
 export const getCustomersList = async (params: {
   pageNumber: number;
@@ -28,11 +29,11 @@ export const getCustomersList = async (params: {
 };
 
 export const createCustomer = async (
-  type: "coach" | "customer",
+  type: 'coach' | 'customer',
   first: string,
   last: string,
   email?: string,
-  phone?: string
+  phone?: string,
 ) => {
   return axios
     .post(`${entityUrl}/create`, {

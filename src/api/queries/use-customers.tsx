@@ -1,11 +1,12 @@
-import { useQuery } from "react-query";
-import { Customer, PaginatedResponse } from "../../types";
-import axios from "../axios";
+import { useQuery } from 'react-query';
 
-const entityUrl = "/customers";
+import { Customer, PaginatedResponse } from '../../types';
+import axios from '../axios';
+
+const entityUrl = '/customers';
 
 export const useCustomers = () => {
-  return useQuery("customers", () =>
+  return useQuery('customers', () =>
     axios
       .get<PaginatedResponse<Customer>>(`${entityUrl}/all`, {
         // ignore pagination for now
@@ -24,6 +25,6 @@ export const useCustomers = () => {
             totalItems: 0,
           };
         }
-      })
+      }),
   );
 };

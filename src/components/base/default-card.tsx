@@ -1,5 +1,5 @@
-import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
 
 interface DefaultCardProps {
   children: React.ReactNode;

@@ -1,4 +1,4 @@
-import CustomerList from "../../components/customers/customer-list/customer-list";
+import CustomerList from '../../components/customers/customer-list/customer-list';
 
 export const Customers = () => {
   return (

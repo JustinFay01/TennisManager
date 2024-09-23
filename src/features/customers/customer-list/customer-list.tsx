@@ -1,3 +1,4 @@
+import AddIcon from '@mui/icons-material/Add';
 import {
   Button,
   LinearProgress,
@@ -9,11 +10,11 @@ import {
   TableHead,
   TableRow,
   Typography,
-} from "@mui/material";
-import AddIcon from "@mui/icons-material/Add";
-import { useCustomers } from "../../../api/queries/use-customers";
-import DefaultCard from "../../base/default-card";
-import "./customer-list.css";
+} from '@mui/material';
+
+import { useCustomers } from '../../../api/queries/use-customers';
+import DefaultCard from '../../base/default-card';
+import './customer-list.css';
 
 export default function CustomerList() {
   const customerQuery = useCustomers();
@@ -23,7 +24,7 @@ export default function CustomerList() {
       {customerQuery.isFetched && (
         <div
           style={{
-            padding: "1rem",
+            padding: '1rem',
           }}
         >
           <DefaultCard className="card">
@@ -32,8 +33,8 @@ export default function CustomerList() {
               <Typography
                 variant="h2"
                 style={{
-                  display: "flex",
-                  alignItems: "center",
+                  display: 'flex',
+                  alignItems: 'center',
                 }}
               >
                 Customers
@@ -41,8 +42,8 @@ export default function CustomerList() {
               <Button variant="contained">
                 <div
                   style={{
-                    display: "flex",
-                    alignItems: "center",
+                    display: 'flex',
+                    alignItems: 'center',
                   }}
                 >
                   <AddIcon />
@@ -57,8 +58,8 @@ export default function CustomerList() {
             )}
             <TableContainer
               style={{
-                maxHeight: "calc(100vh - 150px)",
-                overflowY: "auto",
+                maxHeight: 'calc(100vh - 150px)',
+                overflowY: 'auto',
               }}
             >
               <Table>
