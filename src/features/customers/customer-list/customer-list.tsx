@@ -12,8 +12,9 @@ import {
   Typography,
 } from '@mui/material';
 
+import DefaultCard from '@/components/base/default-card';
+
 import { useCustomers } from '../../../api/queries/use-customers';
-import DefaultCard from '../../base/default-card';
 import './customer-list.css';
 
 export default function CustomerList() {

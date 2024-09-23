@@ -4,13 +4,13 @@ export interface IUser {
   lastName: string;
   email?: string;
   phoneNumber?: string;
-  packages?: Package[];
+  //packages?: Package[];
 }
 
 export type Coach = IUser;
 
 export interface Customer extends IUser {
-  sessions?: Session[];
+  // sessions?: Session[];
 }
 
 export type Package = {

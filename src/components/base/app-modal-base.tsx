@@ -6,7 +6,7 @@ import {
   CircularProgress,
   Grow,
 } from '@mui/material';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 interface AppModalBaseProps {
   isOpen: boolean;
