@@ -1,9 +1,6 @@
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
-import { Outlet } from 'react-router-dom';
-
-import { MainLayout } from '../components/layouts/main-layout';
 
 // eslint-disable-next-line
 export const defaultTheme = createTheme({
@@ -41,8 +38,7 @@ const AppProvider = ({ children }: React.PropsWithChildren) => {
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={defaultTheme}>
         <CssBaseline />
-        <MainLayout>{children}</MainLayout>
-        <Outlet />
+        {children}
       </ThemeProvider>
       <ReactQueryDevtools />
     </QueryClientProvider>

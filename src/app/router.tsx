@@ -2,12 +2,12 @@ import { createBrowserRouter } from 'react-router-dom';
 
 import { Customers } from './routes/pages/customers';
 import { Error } from './routes/pages/error';
-import AppProvider from './provider';
+import { AppRoot } from './routes/root';
 
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <AppProvider />,
+    element: <AppRoot />,
     children: [
       {
         path: '/',
