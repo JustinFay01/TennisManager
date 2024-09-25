@@ -4,11 +4,9 @@ import '@/index.css';
 import { RouterProvider } from 'react-router-dom';
 
 import { router } from '@/app/router';
-import AppProvider from './app/provider';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-    <AppProvider />
   </React.StrictMode>,
 );
