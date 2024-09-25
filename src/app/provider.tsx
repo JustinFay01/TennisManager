@@ -36,12 +36,13 @@ export const defaultTheme = createTheme({
 
 const queryClient = new QueryClient();
 
-const App = () => {
+const AppProvider = ({ children }: React.PropsWithChildren) => {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={defaultTheme}>
         <CssBaseline />
         <MainLayout>
+          {children}
           <Outlet />
         </MainLayout>
       </ThemeProvider>
@@ -50,4 +51,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default AppProvider;
