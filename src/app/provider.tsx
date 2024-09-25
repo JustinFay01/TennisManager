@@ -41,10 +41,8 @@ const AppProvider = ({ children }: React.PropsWithChildren) => {
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={defaultTheme}>
         <CssBaseline />
-        <MainLayout>
-          {children}
-          <Outlet />
-        </MainLayout>
+        <MainLayout>{children}</MainLayout>
+        <Outlet />
       </ThemeProvider>
       <ReactQueryDevtools />
     </QueryClientProvider>

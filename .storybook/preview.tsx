@@ -1,13 +1,15 @@
 import type { Preview } from '@storybook/react';
-import '../src/index.css';
 import React from 'react';
 import AppProvider from '../src/app/provider';
+import { MemoryRouter } from 'react-router-dom';
 
 export const decorators = [
   (Story) => (
-    <AppProvider>
-      <Story />
-    </AppProvider>
+    <MemoryRouter>
+      <AppProvider>
+        <Story />
+      </AppProvider>
+    </MemoryRouter>
   ),
 ];
 
