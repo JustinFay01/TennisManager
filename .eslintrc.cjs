@@ -10,7 +10,7 @@ module.exports = {
     'public/mockServiceWorker.js',
     'generators/*',
   ],
-  extends: ['eslint:recommended'],
+  extends: ['eslint:recommended', 'plugin:storybook/recommended'],
   plugins: ['check-file'],
   overrides: [
     {

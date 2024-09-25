@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "lint": "eslint src --ignore-path .gitignore --ext .ts,.tsx --max-warnings 0",
     "prettier:format": "prettier --write src",
-    "prepare": "husky"
+    "prepare": "husky",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@emotion/react": "^11.13.0",
@@ -24,6 +26,15 @@
     "vite-tsconfig-paths": "^5.0.1"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^1.9.0",
+    "@storybook/addon-essentials": "^8.3.3",
+    "@storybook/addon-interactions": "^8.3.3",
+    "@storybook/addon-links": "^8.3.3",
+    "@storybook/addon-onboarding": "^8.3.3",
+    "@storybook/blocks": "^8.3.3",
+    "@storybook/react": "^8.3.3",
+    "@storybook/react-vite": "^8.3.3",
+    "@storybook/test": "^8.3.3",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.15.0",
@@ -40,9 +51,11 @@
     "eslint-plugin-react": "^7.36.1",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
+    "eslint-plugin-storybook": "^0.8.0",
     "eslint-plugin-testing-library": "^6.3.0",
     "eslint-plugin-vitest": "^0.5.4",
     "husky": "^9.1.6",
+    "storybook": "^8.3.3",
     "typescript": "^5.2.2",
     "vite": "^5.3.4",
     "vite-plugin-react": "^4.0.1"
