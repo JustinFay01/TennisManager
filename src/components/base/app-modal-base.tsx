@@ -7,7 +7,7 @@ import {
   Grow,
 } from '@mui/material';
 
-interface AppModalBaseProps {
+export interface AppModalBaseProps {
   isOpen: boolean;
   children: React.ReactNode;
   isLoading: boolean;
@@ -23,13 +23,6 @@ export const AppModalBase = ({
   style,
   onClose,
 }: AppModalBaseProps) => {
-  // Reset form state on close
-  // useEffect(() => {
-  //   if (!isOpen) {
-  //     resetFormState();
-  //   }
-  // }, [isOpen]);
-
   const createForm = (
     <Backdrop
       open={isOpen}
