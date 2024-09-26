@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react'
 
-import { AppModalBase, AppModalBaseProps } from './app-modal-base';
+import { AppModalBase, AppModalBaseProps } from './app-modal-base'
 
 const meta: Meta<AppModalBaseProps> = {
   component: AppModalBase,
-};
+}
 
-export default meta;
+export default meta
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
@@ -17,4 +17,4 @@ export const Default: Story = {
     onClose: () => {},
     children: 'Modal Content',
   },
-};
+}

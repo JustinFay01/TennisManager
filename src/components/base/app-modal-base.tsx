@@ -5,15 +5,15 @@ import {
   CardContent,
   CircularProgress,
   Grow,
-} from '@mui/material';
+} from '@mui/material'
 
 export interface AppModalBaseProps {
-  isOpen: boolean;
-  children: React.ReactNode;
-  isLoading: boolean;
-  style?: React.CSSProperties;
-  onClose: () => void;
-  resetFormState: () => void;
+  isOpen: boolean
+  children: React.ReactNode
+  isLoading: boolean
+  style?: React.CSSProperties
+  onClose: () => void
+  resetFormState: () => void
 }
 
 export const AppModalBase = ({
@@ -46,7 +46,7 @@ export const AppModalBase = ({
               borderRadius: 10,
             }}
             onClick={(e) => {
-              e.stopPropagation(); // Prevent backdrop from closing
+              e.stopPropagation() // Prevent backdrop from closing
             }}
           >
             <CardContent>{children}</CardContent>
@@ -54,7 +54,7 @@ export const AppModalBase = ({
         </Box>
       </Grow>
     </Backdrop>
-  );
+  )
 
   return (
     <>
@@ -75,5 +75,5 @@ export const AppModalBase = ({
         createForm
       )}
     </>
-  );
-};
+  )
+}

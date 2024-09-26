@@ -1,8 +1,8 @@
-import { Coach } from '../types';
+import { Coach } from '../types'
 
-import axios from './axios';
-const entityUrl = '/coaches';
+import axios from './axios'
+const entityUrl = '/coaches'
 
 export const getCoachesList = async () => {
-  return axios.get<Coach[]>(`${entityUrl}/all`);
-};
+  return axios.get<Coach[]>(`${entityUrl}/all`)
+}

@@ -1,3 +1,3 @@
 export const CreateCustomer = () => {
-  return <div>Create Customer</div>;
-};
+  return <div>Create Customer</div>
+}

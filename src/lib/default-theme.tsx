@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/material';
+import { createTheme } from '@mui/material'
 
 export const defaultTheme = createTheme({
   palette: {
@@ -26,4 +26,4 @@ export const defaultTheme = createTheme({
   typography: {
     fontFamily: 'Lato, sans-serif',
   },
-});
+})

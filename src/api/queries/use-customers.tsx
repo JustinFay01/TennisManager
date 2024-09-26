@@ -1,9 +1,9 @@
-import { useQuery } from 'react-query';
+import { useQuery } from 'react-query'
 
-import { Customer, PaginatedResponse } from '../../types';
-import axios from '../axios';
+import { Customer, PaginatedResponse } from '../../types'
+import axios from '../axios'
 
-const entityUrl = '/customers';
+const entityUrl = '/customers'
 
 export const useCustomers = () => {
   return useQuery('customers', () =>
@@ -17,14 +17,14 @@ export const useCustomers = () => {
       })
       .then((res) => {
         if (res.data && res.data.items.length > 0) {
-          return res.data;
+          return res.data
         } else {
           return {
             items: [],
             totalPages: 0,
             totalItems: 0,
-          };
+          }
         }
       }),
-  );
-};
+  )
+}

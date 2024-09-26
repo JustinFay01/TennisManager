@@ -1,8 +1,8 @@
-import GroupIcon from '@mui/icons-material/Group';
-import HomeIcon from '@mui/icons-material/Home';
-import SportsTennisIcon from '@mui/icons-material/SportsTennis';
-import { NavLink } from 'react-router-dom';
-import './main-nav.css';
+import GroupIcon from '@mui/icons-material/Group'
+import HomeIcon from '@mui/icons-material/Home'
+import SportsTennisIcon from '@mui/icons-material/SportsTennis'
+import { NavLink } from 'react-router-dom'
+import './main-nav.css'
 
 export const MainNav = () => {
   return (
@@ -28,5 +28,5 @@ export const MainNav = () => {
         </NavLink>
       </div>
     </nav>
-  );
-};
+  )
+}

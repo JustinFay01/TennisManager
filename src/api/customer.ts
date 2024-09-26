@@ -1,12 +1,12 @@
-import { Customer, PaginatedResponse } from '../types';
+import { Customer, PaginatedResponse } from '../types'
 
-import axios from './axios';
+import axios from './axios'
 
-const entityUrl = '/customers';
+const entityUrl = '/customers'
 
 export const getCustomersList = async (params: {
-  pageNumber: number;
-  pageSize: number;
+  pageNumber: number
+  pageSize: number
 }) => {
   return axios
     .get<PaginatedResponse<Customer>>(`${entityUrl}/all`, {
@@ -17,16 +17,16 @@ export const getCustomersList = async (params: {
     })
     .then((res) => {
       if (res.data && res.data.items.length > 0) {
-        return res.data;
+        return res.data
       } else {
         return {
           items: [],
           totalPages: 0,
           totalItems: 0,
-        };
+        }
       }
-    });
-};
+    })
+}
 
 export const createCustomer = async (
   type: 'coach' | 'customer',
@@ -44,6 +44,6 @@ export const createCustomer = async (
       phone,
     })
     .then((x) => {
-      return x;
-    });
-};
+      return x
+    })
+}

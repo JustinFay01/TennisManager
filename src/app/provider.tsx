@@ -1,9 +1,9 @@
-import { defaultTheme } from '@/lib/default-theme';
-import { CssBaseline, ThemeProvider } from '@mui/material';
-import { QueryClient, QueryClientProvider } from 'react-query';
-import { ReactQueryDevtools } from 'react-query/devtools';
+import { defaultTheme } from '@/lib/default-theme'
+import { CssBaseline, ThemeProvider } from '@mui/material'
+import { QueryClient, QueryClientProvider } from 'react-query'
+import { ReactQueryDevtools } from 'react-query/devtools'
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient()
 
 const AppProvider = ({ children }: React.PropsWithChildren) => {
   return (
@@ -14,7 +14,7 @@ const AppProvider = ({ children }: React.PropsWithChildren) => {
       </ThemeProvider>
       <ReactQueryDevtools />
     </QueryClientProvider>
-  );
-};
+  )
+}
 
-export default AppProvider;
+export default AppProvider

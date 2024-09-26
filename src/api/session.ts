@@ -1,12 +1,12 @@
-import { PaginatedResponse, Session, SessionType } from '../types';
+import { PaginatedResponse, Session, SessionType } from '../types'
 
-import axios from './axios';
+import axios from './axios'
 
-const entityUrl = '/sessions';
+const entityUrl = '/sessions'
 
 export const getSessionsList = async (params: {
-  pageNumber: number;
-  pageSize: number;
+  pageNumber: number
+  pageSize: number
 }) => {
   return axios
     .get<PaginatedResponse<Session>>(`${entityUrl}/all`, {
@@ -17,16 +17,16 @@ export const getSessionsList = async (params: {
     })
     .then((res) => {
       if (res.data && res.data.items.length > 0) {
-        return res.data;
+        return res.data
       } else {
         return {
           items: [],
           totalPages: 0,
           totalItems: 0,
-        };
+        }
       }
-    });
-};
+    })
+}
 
 export const createSession = async (
   type: SessionType,
@@ -46,9 +46,9 @@ export const createSession = async (
       customerAndPrices,
     })
     .then((x) => {
-      return x;
-    });
-};
+      return x
+    })
+}
 
 export const addCustomersToSession = async (
   sessionIds: string[],
@@ -57,5 +57,5 @@ export const addCustomersToSession = async (
   return axios.patch(`${entityUrl}/add-customers`, {
     sessionIds,
     customersAndPrices,
-  });
-};
+  })
+}

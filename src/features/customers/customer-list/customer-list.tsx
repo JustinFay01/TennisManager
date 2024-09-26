@@ -1,4 +1,4 @@
-import AddIcon from '@mui/icons-material/Add';
+import AddIcon from '@mui/icons-material/Add'
 import {
   Button,
   LinearProgress,
@@ -10,15 +10,15 @@ import {
   TableHead,
   TableRow,
   Typography,
-} from '@mui/material';
+} from '@mui/material'
 
-import DefaultCard from '@/components/base/default-card';
+import DefaultCard from '@/components/base/default-card'
 
-import { useCustomers } from '../../../api/queries/use-customers';
-import './customer-list.css';
+import { useCustomers } from '../../../api/queries/use-customers'
+import './customer-list.css'
 
 export default function CustomerList() {
-  const customerQuery = useCustomers();
+  const customerQuery = useCustomers()
 
   return (
     <div>
@@ -98,5 +98,5 @@ export default function CustomerList() {
         </div>
       )}
     </div>
-  );
+  )
 }

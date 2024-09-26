@@ -1,8 +1,8 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom'
 
-import { Customers } from './routes/pages/customers';
-import { Error } from './routes/pages/error';
-import { AppRoot } from './routes/root';
+import { Customers } from './routes/pages/customers'
+import { Error } from './routes/pages/error'
+import { AppRoot } from './routes/root'
 
 export const router = createBrowserRouter([
   {
@@ -10,7 +10,7 @@ export const router = createBrowserRouter([
     element: <AppRoot />,
     children: [
       {
-        path: '/',
+        path: '/customers',
         element: <Customers />,
       },
       {
@@ -19,4 +19,4 @@ export const router = createBrowserRouter([
       },
     ],
   },
-]);
+])

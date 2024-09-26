@@ -1,17 +1,17 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react'
 
-import DefaultCard from './default-card';
+import DefaultCard from './default-card'
 
 const meta = {
   component: DefaultCard,
-} satisfies Meta<typeof DefaultCard>;
+} satisfies Meta<typeof DefaultCard>
 
-export default meta;
+export default meta
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
     children: 'Card Content',
   },
-};
+}
