@@ -11,11 +11,26 @@ const LoginButton = () => {
   return <button onClick={() => loginWithRedirect()}>Log In</button>
 }
 
+const LogoutButton = () => {
+  const { logout } = useAuth0()
+
+  return (
+    <button
+      onClick={() =>
+        logout({ logoutParams: { returnTo: window.location.origin } })
+      }
+    >
+      Log Out
+    </button>
+  )
+}
+
 export const AppRoot = () => {
   return (
     <AppProvider>
       <MainLayout>
         <LoginButton />
+        <LogoutButton />
         <Outlet />
       </MainLayout>
     </AppProvider>
