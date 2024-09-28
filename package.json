@@ -22,6 +22,7 @@
     "axios": "^1.7.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-error-boundary": "^4.0.13",
     "react-query": "^3.39.3",
     "react-router-dom": "^6.26.0",
     "vite-tsconfig-paths": "^5.0.1"

@@ -8,9 +8,9 @@ import { Auth0Wrapper } from './lib/auth/auth-wrapper'
 const root = createRoot(document.getElementById('root')!)
 
 root.render(
-  <Auth0Wrapper>
-    <React.StrictMode>
+  <React.StrictMode>
+    <Auth0Wrapper>
       <RouterProvider router={router} />
-    </React.StrictMode>
-  </Auth0Wrapper>,
+    </Auth0Wrapper>
+  </React.StrictMode>,
 )
