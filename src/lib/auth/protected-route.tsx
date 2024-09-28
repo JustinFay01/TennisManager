@@ -1,4 +1,4 @@
-import { useAuth0 } from '@auth0/auth0-react'
+//import { useAuth0 } from '@auth0/auth0-react'
 import { ErrorBoundary } from 'react-error-boundary'
 
 export const ProtectedRoute = ({ children }: React.PropsWithChildren) => {
