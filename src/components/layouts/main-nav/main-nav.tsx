@@ -31,16 +31,16 @@ export const MainNav = () => {
   return (
     <FlexColumn
       sx={{
-        spacing: 6,
+        gap: 2,
       }}
     >
-      <NavItem href={'/test'} subtitle="Home">
+      <NavItem href={'/app'} subtitle="Home">
         <HomeIcon fontSize="large" />
       </NavItem>
-      <NavItem href={'/test'} subtitle="Customers">
+      <NavItem href={'/app'} subtitle="Customers">
         <GroupIcon fontSize="large" />
       </NavItem>
-      <NavItem href={'/test'} subtitle="Sessions">
+      <NavItem href={'/app'} subtitle="Sessions">
         <SportsTennisIcon fontSize="large" />
       </NavItem>
     </FlexColumn>
