@@ -29,6 +29,14 @@ export const Landing = () => {
     )
   }
 
+  const UnprotectedButton = () => {
+    return (
+      <Button variant="contained" href="/app/customers">
+        Unprotected
+      </Button>
+    )
+  }
+
   return (
     <Stack
       direction="column"
@@ -43,6 +51,7 @@ export const Landing = () => {
       <Stack direction="row" spacing={2}>
         <LoginButton />
         <LogoutButton />
+        <UnprotectedButton />
       </Stack>
     </Stack>
   )
