@@ -5,7 +5,7 @@
 
 ~~3. Configure Protected Routes ~~
 ~~3. Add Mui Theming ~~
-4. Configure axios
+~~4. Configure axios~~
 4. Create Error Pages
 ~~4. Fix 401 on login~~
 5. Session View
