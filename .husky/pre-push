@@ -1,1 +1,15 @@
+#!/bin/sh
+
+prettify()
+{
+    echo -e "\n[GITHOOK] ------------------------------------------------------------------------"
+    echo      "[GITHOOK] $1"
+    echo  -e  "[GITHOOK] ------------------------------------------------------------------------\n"
+}
+
+# Start script
+prettify "Running pre-push lint"
+
 npm run lint
+
+prettify "Lint done. Exiting."

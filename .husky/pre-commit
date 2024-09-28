@@ -1,2 +1,31 @@
-npm run prettier:format
-git add .
+#!/bin/sh
+prettify()
+{
+    echo -e "\n[GITHOOK] ------------------------------------------------------------------------"
+    echo      "[GITHOOK] $1"
+    echo  -e  "[GITHOOK] ------------------------------------------------------------------------\n"
+}
+
+
+# Start script
+
+prettify "Running pre-commit prettier"
+
+files=$(echo "$files" | grep "src/") || true
+
+if [ -z "$files" ]
+then
+    prettify "No files to prettify. Exiting."
+    exit 0
+fi
+
+npm run prettier
+
+
+for file in $files
+do
+    git add "$file" > /dev/null 2>&1
+done
+
+
+prettify "Prettier done. Exiting."
