@@ -12,7 +12,7 @@ export const NavLink = ({ href, title, children }: NavLinkProps) => {
       TouchRippleProps={{ style: { color: theme.palette.secondary.main } }}
     >
       <MuiLink
-        //href={href}
+        href={href}
         aria-label={title ?? 'Navigation Item'}
         sx={{
           textDecoration: 'none',
