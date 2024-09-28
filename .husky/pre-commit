@@ -21,7 +21,6 @@ fi
 
 npm run prettier
 
-
 for file in $files
 do
     git add "$file" > /dev/null 2>&1
