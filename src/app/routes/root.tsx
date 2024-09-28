@@ -1,8 +1,7 @@
 import { Outlet } from 'react-router-dom'
-
 import AppProvider from '@/app/provider'
-import { MainLayout } from '@/components/layouts/main-layout'
 import { useAuth0 } from '@auth0/auth0-react'
+import { AppLayout } from '@/components/layouts/app-layout'
 
 //TODO: Place in own class
 const LoginButton = () => {
@@ -28,11 +27,11 @@ const LogoutButton = () => {
 export const AppRoot = () => {
   return (
     <AppProvider>
-      <MainLayout>
+      <AppLayout>
         <LoginButton />
         <LogoutButton />
         <Outlet />
-      </MainLayout>
+      </AppLayout>
     </AppProvider>
   )
 }
