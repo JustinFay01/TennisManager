@@ -1,6 +1,6 @@
 import { PaginatedResponse, Session, SessionType } from '../types'
 
-import axios from './axios'
+import axios from '../lib/api-client'
 
 const entityUrl = '/sessions'
 

@@ -1,6 +1,6 @@
 import { Coach } from '../types'
 
-import axios from './axios'
+import axios from '../lib/api-client'
 const entityUrl = '/coaches'
 
 export const getCoachesList = async () => {

@@ -1,6 +1,6 @@
 import { Customer, PaginatedResponse } from '../types'
 
-import axios from './axios'
+import axios from '../lib/api-client'
 
 const entityUrl = '/customers'
 
