@@ -12,6 +12,6 @@
 6. Customer View
 
 
-1. Users in API
+~~1. Users in API~~
 2. Axios Check In function after Auth Login
 3. Customers Table with Profile Pictures
