@@ -1,5 +1,15 @@
 services:
-  sampleproject:
+  reverse-proxy:
+    images: traefik:v3.1
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 80:80
+      - 8080:8080
+  tennismanager-vite:
     image: tennismanager-vite
     build:
       context: .
@@ -7,4 +17,4 @@ services:
     environment:
       NODE_ENV: production
     ports:
-      - 3000:3000
+      - 8080:8080
