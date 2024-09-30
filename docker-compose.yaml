@@ -4,17 +4,19 @@ services:
     command:
       - "--api.insecure=true"
       - "--providers.docker"
+    ports:
+      - "80:80"
+      # Web UI Enabled by --api.insecure=true
+      - "8080:8080"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    ports:
-      - 3000:3000
-      - 3030:3030
   tennismanager-vite:
     image: tennismanager-vite
+    labels:
+      # Eventually change this to your domain
+      - "traefik.http.routers.tennismanager-vite.rule=Host(`tennismanager.local`)"
     build:
       context: .
       dockerfile: ./Dockerfile
     environment:
       NODE_ENV: production
-    ports:
-      - 8080:8080
