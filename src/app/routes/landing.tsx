@@ -1,17 +1,18 @@
-import { useLoginWithRedirect } from '@/hooks/login-with-redirect'
+//import { useLoginWithRedirect } from '@/hooks/login-with-redirect'
 import { useAuth0 } from '@auth0/auth0-react'
 import { Button, Stack, Typography } from '@mui/material'
 
 export const Landing = () => {
   const LoginButton = () => {
-    const loginWithRedirect = useLoginWithRedirect()
+    //const loginWithRedirect = useLoginWithRedirect()
 
     return (
       <Button
-        onClick={() =>
-          loginWithRedirect({
-            appState: { returnTo: '/app/customers' },
-          })
+        onClick={
+          () => {}
+          // loginWithRedirect({
+          //   appState: { returnTo: '/app/customers' },
+          // })
         }
         variant="contained"
       >

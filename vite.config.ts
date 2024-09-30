@@ -6,6 +6,7 @@ import viteTsconfigPaths from 'vite-tsconfig-paths'
 export default defineConfig({
   plugins: [react(), viteTsconfigPaths()],
   server: {
+    host: true, // needed for Docker
     port: 3000,
   },
 })
