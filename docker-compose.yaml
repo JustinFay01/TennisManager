@@ -14,7 +14,8 @@ services:
     image: tennismanager-vite
     labels:
       # Eventually change this to your domain
-      - "traefik.http.routers.tennismanager-vite.rule=Host(`tennismanager.local`)"
+      - "traefik.http.routers.tennismanager-vite.rule=PathPrefix(`/tm`)"
+      - "traefik.http.services.tennismanager-vite.loadbalancer.server.port=3000" 
     build:
       context: .
       dockerfile: ./Dockerfile
