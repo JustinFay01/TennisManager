@@ -13,7 +13,7 @@ root.render(
     <ErrorBoundary
       FallbackComponent={({ error }) => (
         <div role="alert">
-          <p>Something went REALLY wrong:</p>
+          <p>Something went REALLY wrong | Updated | Twice!:</p>
           <pre style={{ color: 'red' }}>{error.message}</pre>
         </div>
       )}
