@@ -11,6 +11,7 @@
 5. Session View
 6. Customer View
 
+1. Write scripts for docker build and push 
 
 ~~1. Users in API~~
 2. Axios Check In function after Auth Login
