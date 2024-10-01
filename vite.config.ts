@@ -7,6 +7,6 @@ export default defineConfig({
   plugins: [react(), viteTsconfigPaths()],
   server: {
     host: true, // needed for Docker
-    port: 8080,
+    port: 3000,
   },
 })
