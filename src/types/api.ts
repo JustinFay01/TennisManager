@@ -21,7 +21,7 @@ export type Package = {
   coachPrice?: number
 }
 
-export type User = Coach | Customer
+//export type User = Coach | Customer
 
 export interface Session {
   id: string
