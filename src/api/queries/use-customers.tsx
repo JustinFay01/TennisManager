@@ -1,6 +1,6 @@
 import { useQuery } from 'react-query'
 
-import { Customer, PaginatedResponse } from '../../types'
+import { Customer, PaginatedResponse } from '../../types/types'
 import axios from '../../lib/api-client'
 
 const entityUrl = '/customers'

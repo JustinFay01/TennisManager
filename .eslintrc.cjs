@@ -16,6 +16,7 @@ module.exports = {
     'react-hooks',
     '@typescript-eslint',
     'check-file',
+    'prettier',
   ],
   rules: {
     'react/react-in-jsx-scope': 'off',

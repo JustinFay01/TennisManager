@@ -1,17 +1,14 @@
-import type { Preview } from '@storybook/react';
-import React from 'react';
-import AppProvider from '../src/app/provider';
-import { MemoryRouter } from 'react-router-dom';
+import type { Preview } from '@storybook/react'
+import React from 'react'
+import { StorybookProvider } from './storybook-provider'
 
 export const decorators = [
   (Story) => (
-    <MemoryRouter>
-      <AppProvider>
-        <Story />
-      </AppProvider>
-    </MemoryRouter>
+    <StorybookProvider>
+      <Story />
+    </StorybookProvider>
   ),
-];
+]
 
 const preview: Preview = {
   decorators: decorators,
@@ -23,6 +20,6 @@ const preview: Preview = {
       },
     },
   },
-};
+}
 
-export default preview;
+export default preview

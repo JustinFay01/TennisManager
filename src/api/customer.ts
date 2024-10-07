@@ -1,4 +1,4 @@
-import { Customer, PaginatedResponse } from '../types'
+import { Customer, PaginatedResponse } from '../types/types'
 
 import axios from '../lib/api-client'
 
