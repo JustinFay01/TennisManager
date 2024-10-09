@@ -19,10 +19,24 @@ export const router = createBrowserRouter([
     ),
     children: [
       {
+        path: '/app',
+        lazy: async () => {
+          const { DashboardRoute } = await import('@/app/routes/app/dashboard')
+          return { Component: DashboardRoute }
+        },
+      },
+      {
         path: 'customers',
         lazy: async () => {
           const { Customers } = await import('@/app/routes/app/customers')
           return { Component: Customers }
+        },
+      },
+      {
+        path: 'schedule',
+        lazy: async () => {
+          const { ScheduleRoute } = await import('@/app/routes/app/schedule')
+          return { Component: ScheduleRoute }
         },
       },
     ],
@@ -30,7 +44,7 @@ export const router = createBrowserRouter([
   {
     path: '*',
     lazy: async () => {
-      const { NotFound } = await import('@/app/routes/not-found')
+      const { NotFound } = await import('@/app/routes/errors/not-found')
       return { Component: NotFound }
     },
   },

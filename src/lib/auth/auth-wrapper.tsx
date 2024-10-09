@@ -1,6 +1,7 @@
+import { WithChildren } from '@/types/props'
 import { Auth0Provider } from '@auth0/auth0-react'
 
-export const Auth0Wrapper = ({ children }: React.PropsWithChildren) => {
+export const Auth0Wrapper = ({ children }: WithChildren) => {
   return (
     <Auth0Provider
       domain={import.meta.env.VITE_AUTH_DOMAIN}

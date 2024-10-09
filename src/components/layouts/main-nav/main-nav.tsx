@@ -2,8 +2,8 @@ import GroupIcon from '@mui/icons-material/Group'
 import HomeIcon from '@mui/icons-material/Home'
 import SportsTennisIcon from '@mui/icons-material/SportsTennis'
 import { FlexColumn } from '@/components/ui/layout/flexbox'
-import { WithChildrenAndSx } from '@/components/props'
 import { NavLink } from '@/components/ui/nav-link'
+import { WithChildrenAndSx } from '@/types/props'
 
 interface NavItemProps extends WithChildrenAndSx {
   children: React.ReactNode
@@ -37,10 +37,10 @@ export const MainNav = () => {
       <NavItem href={'/app'} subtitle="Home">
         <HomeIcon fontSize="large" />
       </NavItem>
-      <NavItem href={'/app'} subtitle="Customers">
+      <NavItem href={'/app/customers'} subtitle="Customers">
         <GroupIcon fontSize="large" />
       </NavItem>
-      <NavItem href={'/app'} subtitle="Sessions">
+      <NavItem href={'/app/schedule'} subtitle="Schedule">
         <SportsTennisIcon fontSize="large" />
       </NavItem>
     </FlexColumn>
