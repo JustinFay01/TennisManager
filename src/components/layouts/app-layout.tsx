@@ -1,8 +1,8 @@
-import { Drawer, Box } from '@mui/material'
-import { WithChildrenAndSx, WithChildren } from '../props'
 import { FlexRow } from '@/components/ui/layout/flexbox'
+import { Box, Drawer } from '@mui/material'
 import { LayoutContainer, Main } from './container'
 import { MainNav } from './main-nav/main-nav'
+import { WithChildren, WithChildrenAndSx } from '@/types/props'
 
 type SideNavProps = {
   width?: number
