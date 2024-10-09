@@ -1,4 +1,4 @@
-import { PaginatedResponse, Session, SessionType } from '../types/types'
+import { PaginatedResponse, Session, SessionType } from '../types/props'
 
 import axios from '../lib/api-client'
 

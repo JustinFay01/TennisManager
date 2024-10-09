@@ -1,4 +1,4 @@
-import { Coach } from '../types/types'
+import { Coach } from '../types/props'
 
 import axios from '../lib/api-client'
 const entityUrl = '/coaches'
