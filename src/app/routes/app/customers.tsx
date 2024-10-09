@@ -30,6 +30,7 @@ const ProfileInfo = () => {
           </Card>
         </FlexColumn>
       )}
+      {!user && <Typography variant="h2">No user profile found</Typography>}
     </>
   )
 }
