@@ -13,6 +13,7 @@ export const Auth0Wrapper = ({ children }: WithChildren) => {
       authorizationParams={{
         redirect_uri: redirectUri,
       }}
+      cacheLocation="localstorage"
     >
       {children}
     </Auth0Provider>
