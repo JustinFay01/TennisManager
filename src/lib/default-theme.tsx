@@ -86,5 +86,48 @@ export const defaultTheme = createTheme({
   },
   typography: {
     fontFamily: 'Poppins, sans-serif',
+    h1: {
+      fontSize: '3rem',
+      fontWeight: 700,
+    },
+    h2: {
+      fontSize: '2.5rem',
+      fontWeight: 700,
+    },
+    h3: {
+      fontSize: '2rem',
+      fontWeight: 700,
+    },
+    h4: {
+      fontSize: '1.5rem',
+      fontWeight: 700,
+    },
+    h5: {
+      fontSize: '1.25rem',
+      fontWeight: 700,
+    },
+    h6: {
+      fontSize: '1rem',
+      fontWeight: 700,
+    },
+    body1: {
+      fontSize: '1rem',
+      fontWeight: 400,
+    },
+    body2: {
+      fontSize: '.875rem',
+      fontWeight: 400,
+    },
+  },
+  components: {
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          borderRadius: '1rem',
+          boxShadow:
+            '-10px -10px 10px rgba(255, 255, 255, .5), 12px 12px 12px rgba(0, 0, 0, 0.3)',
+        },
+      },
+    },
   },
 })
