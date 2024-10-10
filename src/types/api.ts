@@ -1,43 +1,18 @@
-export interface IUser {
+export interface BaseEntity {
   id: string
-  firstName: string
-  lastName: string
+}
+
+export interface User extends BaseEntity {
   email?: string
+  firstName?: string
+  lastName?: string
+  role?: string
+  picture?: string
   phoneNumber?: string
-  //packages?: Package[];
 }
 
-export type Coach = IUser
-
-export interface Customer extends IUser {
-  // sessions?: Session[];
-}
-
-export type Package = {
-  id: string
-  name: string
-  defaultPrice: number
-  usesRemaining: number
-  coachPrice?: number
-}
-
-//export type User = Coach | Customer
-
-export interface Session {
-  id: string
-  name: string
-  date: Date
-  description?: string
-  type: keyof typeof SessionType
-  coach?: Coach
-}
-
-export interface PaginatedResponse<T> {
-  items: T[]
-  pageNumber: number
-  pageSize: number
-  totalItems: number
-  totalPages: number
+export interface CustomerListItem extends User {
+  memberNumber?: string
 }
 
 export class SessionType {
