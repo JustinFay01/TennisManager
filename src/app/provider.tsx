@@ -1,3 +1,4 @@
+import { GlobalModal } from '@/components/ui/feedback/modals/components/global-modal'
 import { Auth0Wrapper } from '@/lib/auth/auth-wrapper'
 import { defaultTheme } from '@/lib/default-theme'
 import { CssBaseline, ThemeProvider } from '@mui/material'
@@ -20,6 +21,7 @@ const AppProvider = ({ children }: React.PropsWithChildren) => {
       <Auth0Wrapper>
         <QueryClientProvider client={queryClient}>
           <ThemeProvider theme={defaultTheme}>
+            <GlobalModal />
             <CssBaseline />
             {children}
           </ThemeProvider>
