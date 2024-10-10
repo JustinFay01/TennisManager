@@ -1,5 +1,35 @@
 import { createTheme } from '@mui/material'
 
+export const themeColors = {
+  background: '#f2f2f7',
+  white: '#ffffff',
+  black: '#08080a',
+  gray: {
+    dark: '#86868a',
+    main: '#d2d2d5',
+    light: '#e5e5ea',
+  },
+  brand: {
+    // -- Core --
+    plum: '#33143d',
+    violet: '#7d00b0',
+    lilac: '#c387ff',
+    yolk: '#ffc95a',
+    rhubarb: '#ff6a6a',
+
+    // -- Blush --
+    paper: '#fff5eb',
+    rose: '#ffeff9',
+    stone: '#ebebfa',
+
+    // -- Pinch --
+    lime: '#a0d787',
+    sky: '#84cfdb',
+    pine: '#277c72',
+    marine: '#003c6e',
+  },
+}
+
 export const defaultTheme = createTheme({
   palette: {
     background: {
