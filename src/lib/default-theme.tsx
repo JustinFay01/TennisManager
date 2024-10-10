@@ -2,58 +2,74 @@ import { createTheme } from '@mui/material'
 
 export const themeColors = {
   background: '#f2f2f7',
-  white: '#ffffff',
-  black: '#08080a',
-  gray: {
-    dark: '#86868a',
-    main: '#d2d2d5',
-    light: '#e5e5ea',
+  green: {
+    main: '#315a39',
+    light: '#7a9f79',
+    dark: '#142c14',
   },
-  brand: {
-    // -- Core --
-    plum: '#33143d',
-    violet: '#7d00b0',
-    lilac: '#c387ff',
-    yolk: '#ffc95a',
-    rhubarb: '#ff6a6a',
-
-    // -- Blush --
-    paper: '#fff5eb',
-    rose: '#ffeff9',
-    stone: '#ebebfa',
-
-    // -- Pinch --
-    lime: '#a0d787',
-    sky: '#84cfdb',
-    pine: '#277c72',
-    marine: '#003c6e',
+  infoGreen: {
+    main: '#006400',
+    light: '#96be8c',
+    dark: '#2a3c24',
+  },
+  mutedBlue: {
+    main: '#9BC4CB',
+    light: '#C0E0DE',
+    dark: '#08415C',
+  },
+  blue: {
+    main: '#5fa8d3',
+    light: '#89c2d9',
+    dark: '#003049',
+  },
+  red: {
+    main: '#ba181b',
+    light: '#db504a',
+    dark: '#590004',
+  },
+  orange: {
+    main: '#ff6d00',
+    light: '#f7b267',
+    dark: '#813405',
+  },
+  purple: {
+    main: '#b185db',
+    light: '#dec9e9',
+    dark: '#3f1f5c',
   },
 }
 
 export const defaultTheme = createTheme({
   palette: {
-    background: {
-      default: '#EEF0F2',
-      paper: '#ffffff',
-    },
-    text: {
-      primary: '#3b3b3b', // Matches prefers-color-scheme: light text color
-      secondary: '#002D04', // Optional: matches the initial primary text color
-    },
     primary: {
-      light: '#FAFAFF', // 300
-      main: '#002D04', // 500
-      dark: '#A38D5A', // 900
-      contrastText: '#fafaff',
+      main: themeColors.green.main,
+      light: themeColors.green.light,
+      dark: themeColors.green.dark,
     },
     secondary: {
-      light: '#FAFAFF',
-      main: '#A38D5A',
-      dark: '#002D04',
-      contrastText: '#000000',
+      main: themeColors.mutedBlue.main,
+      light: themeColors.mutedBlue.light,
+      dark: themeColors.mutedBlue.dark,
     },
-  },
-  typography: {
-    fontFamily: 'Lato, sans-serif',
+    error: {
+      main: themeColors.red.main,
+      light: themeColors.red.light,
+      dark: themeColors.red.dark,
+    },
+    warning: {
+      main: themeColors.orange.main,
+      light: themeColors.orange.light,
+      dark: themeColors.orange.dark,
+    },
+    info: {
+      main: themeColors.infoGreen.main,
+      light: themeColors.infoGreen.light,
+      dark: themeColors.infoGreen.dark,
+    },
+    success: {
+      main: themeColors.purple.main,
+      light: themeColors.purple.light,
+      dark: themeColors.purple.dark,
+    },
   },
 })
