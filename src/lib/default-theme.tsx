@@ -1,7 +1,11 @@
 import { createTheme } from '@mui/material'
 
 export const themeColors = {
-  background: '#f2f2f7',
+  background: {
+    main: '#eff4f8',
+    light: '#f9f9f9',
+    dark: '#1f1f1f',
+  },
   green: {
     main: '#315a39',
     light: '#7a9f79',
@@ -41,6 +45,10 @@ export const themeColors = {
 
 export const defaultTheme = createTheme({
   palette: {
+    background: {
+      default: themeColors.background.main,
+      paper: themeColors.background.light,
+    },
     primary: {
       main: themeColors.green.main,
       light: themeColors.green.light,
@@ -71,5 +79,12 @@ export const defaultTheme = createTheme({
       light: themeColors.purple.light,
       dark: themeColors.purple.dark,
     },
+    text: {
+      primary: themeColors.green.dark,
+      secondary: themeColors.mutedBlue.dark,
+    },
+  },
+  typography: {
+    fontFamily: 'Poppins, sans-serif',
   },
 })
