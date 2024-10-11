@@ -2,7 +2,7 @@ import { FlexRow } from '@/components/ui/layout/flexbox'
 import { WithChildren, WithChildrenAndSx } from '@/types/props'
 import { Box, Drawer } from '@mui/material'
 import { LayoutContainer, Main } from './container'
-import { MainNav } from './main-nav/main-nav'
+import { FloatingNav } from './main-nav/main-nav'
 
 type SideNavProps = {
   width?: number
@@ -35,9 +35,7 @@ export const AppLayout = ({ children }: WithChildren) => {
   return (
     <LayoutContainer>
       <LayoutColumns>
-        <SideNav>
-          <MainNav />
-        </SideNav>
+        <FloatingNav />
         <Main>{children}</Main>
       </LayoutColumns>
     </LayoutContainer>
