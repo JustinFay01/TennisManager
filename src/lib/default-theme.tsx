@@ -125,7 +125,7 @@ export const defaultTheme = createTheme({
         root: {
           borderRadius: '1rem',
           boxShadow:
-            '-10px -10px 10px rgba(255, 255, 255, .5), 12px 12px 12px rgba(0, 0, 0, 0.3)',
+            '-10px -10px 10px rgba(255, 255, 255, .0), 12px 12px 12px rgba(0, 0, 0, 0.1)',
         },
       },
     },

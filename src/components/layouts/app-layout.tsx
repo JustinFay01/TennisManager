@@ -33,11 +33,19 @@ export const LayoutColumns = ({ children }: WithChildren) => {
 
 export const AppLayout = ({ children }: WithChildren) => {
   return (
-    <LayoutContainer>
+    <FlexRow sx={{ flex: '1 1 100%', padding: 2, minHeight: '100vh' }}>
       <LayoutColumns>
         <FloatingNav />
-        <Main>{children}</Main>
+        <Main
+          sx={{
+            flex: '1 1 auto',
+            overflow: 'auto',
+            padding: 2,
+          }}
+        >
+          {children}
+        </Main>
       </LayoutColumns>
-    </LayoutContainer>
+    </FlexRow>
   )
 }

@@ -5,7 +5,8 @@ import GroupIcon from '@mui/icons-material/Group'
 import HomeIcon from '@mui/icons-material/Home'
 import SportsTennisIcon from '@mui/icons-material/SportsTennis'
 import { Card, Link, Typography } from '@mui/material'
-
+import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined'
+import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined'
 interface NavItemProps extends WithChildrenAndSx {
   href: string
   title?: string
@@ -56,18 +57,18 @@ const RowNavItem = ({ children, href, sx }: NavItemProps) => {
 export const FloatingNav = () => {
   return (
     <Card>
-      <FlexColumn>
+      <FlexColumn spacing={3} sx={{ padding: 2 }}>
         <RowNavItem href={'/app'}>
-          <HomeIcon fontSize="large" />
-          <Typography variant="h6">Home</Typography>
+          <DashboardOutlinedIcon fontSize="large" />
+          <Typography variant="h4">Home</Typography>
         </RowNavItem>
         <RowNavItem href={'/app/customers'}>
-          <GroupIcon fontSize="large" />
-          <Typography variant="h6">Customers</Typography>
+          <GroupOutlinedIcon fontSize="large" />
+          <Typography variant="h4">Customers</Typography>
         </RowNavItem>
         <RowNavItem href={'/app/schedule'}>
           <SportsTennisIcon fontSize="large" />
-          <Typography variant="h6">Schedule</Typography>
+          <Typography variant="h4">Schedule</Typography>
         </RowNavItem>
       </FlexColumn>
     </Card>
