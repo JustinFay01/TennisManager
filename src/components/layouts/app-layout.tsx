@@ -1,8 +1,8 @@
 import { FlexRow } from '@/components/ui/layout/flexbox'
+import { WithChildren, WithChildrenAndSx } from '@/types/props'
 import { Box, Drawer } from '@mui/material'
 import { LayoutContainer, Main } from './container'
 import { MainNav } from './main-nav/main-nav'
-import { WithChildren, WithChildrenAndSx } from '@/types/props'
 
 type SideNavProps = {
   width?: number
@@ -16,7 +16,6 @@ const SideNav = ({ children, sx, width = 80 }: SideNavProps) => {
         sx={{
           width,
           flexShrink: 0,
-
           ...sx,
         }}
       >

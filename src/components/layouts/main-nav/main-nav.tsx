@@ -1,19 +1,19 @@
 import GroupIcon from '@mui/icons-material/Group'
 import HomeIcon from '@mui/icons-material/Home'
 import SportsTennisIcon from '@mui/icons-material/SportsTennis'
-import { FlexColumn } from '@/components/ui/layout/flexbox'
+import { FlexColumn, FlexRow } from '@/components/ui/layout/flexbox'
 import { NavLink } from '@/components/ui/nav-link'
 import { WithChildrenAndSx } from '@/types/props'
+import { Card, Link } from '@mui/material'
 
 interface NavItemProps extends WithChildrenAndSx {
-  children: React.ReactNode
   href: string
-  subtitle?: string
+  title?: string
 }
 
-const NavItem = ({ children, subtitle, href, sx }: NavItemProps) => {
+const StackedNavItem = ({ children, title, href, sx }: NavItemProps) => {
   return (
-    <NavLink href={href} aria-label={subtitle ?? 'Navigation Item'}>
+    <NavLink href={href} aria-label={title ?? 'Navigation Item'}>
       <FlexColumn
         sx={{
           alignItems: 'center',
@@ -21,9 +21,35 @@ const NavItem = ({ children, subtitle, href, sx }: NavItemProps) => {
         }}
       >
         {children}
-        {subtitle && <span className="nav-subtitle">{subtitle}</span>}
+        {title && <span className="nav-title">{title}</span>}
       </FlexColumn>
     </NavLink>
+  )
+}
+
+const RowNavItem = ({ title, href }: NavItemProps) => {
+  return (
+    <FlexRow>
+      <Link href={href}></Link>
+    </FlexRow>
+  )
+}
+
+export const FloatingNav = () => {
+  return (
+    <Card>
+      <FlexColumn>
+        <StackedNavItem href={'/app'} title="Home">
+          <HomeIcon fontSize="large" />
+        </StackedNavItem>
+        <StackedNavItem href={'/app/customers'} title="Customers">
+          <GroupIcon fontSize="large" />
+        </StackedNavItem>
+        <StackedNavItem href={'/app/schedule'} title="Schedule">
+          <SportsTennisIcon fontSize="large" />
+        </StackedNavItem>
+      </FlexColumn>
+    </Card>
   )
 }
 
@@ -34,15 +60,15 @@ export const MainNav = () => {
         gap: 2,
       }}
     >
-      <NavItem href={'/app'} subtitle="Home">
+      <StackedNavItem href={'/app'} subtitle="Home">
         <HomeIcon fontSize="large" />
-      </NavItem>
-      <NavItem href={'/app/customers'} subtitle="Customers">
+      </StackedNavItem>
+      <StackedNavItem href={'/app/customers'} subtitle="Customers">
         <GroupIcon fontSize="large" />
-      </NavItem>
-      <NavItem href={'/app/schedule'} subtitle="Schedule">
+      </StackedNavItem>
+      <StackedNavItem href={'/app/schedule'} subtitle="Schedule">
         <SportsTennisIcon fontSize="large" />
-      </NavItem>
+      </StackedNavItem>
     </FlexColumn>
   )
 }
