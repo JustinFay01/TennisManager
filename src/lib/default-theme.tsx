@@ -111,7 +111,7 @@ export const defaultTheme = createTheme({
       fontWeight: 700,
     },
     body1: {
-      fontSize: '1rem',
+      fontSize: '1.25rem',
       fontWeight: 400,
     },
     body2: {
@@ -124,8 +124,7 @@ export const defaultTheme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: '1rem',
-          boxShadow:
-            '-10px -10px 10px rgba(255, 255, 255, .0), 12px 12px 12px rgba(0, 0, 0, 0.1)',
+          boxShadow: '0 10px 10px rgba(0, 0, 0, 0.3)',
         },
       },
     },
