@@ -1,52 +1,73 @@
-import { FlexColumn, FlexSpacer } from '@/components/ui/layout/flexbox'
-import { Button, Card, Typography } from '@mui/material'
-import { useState, useEffect } from 'react'
-import { NavItem } from './components/nav-item'
 import SpaceDashboardOutlinedIcon from '@mui/icons-material/SpaceDashboardOutlined'
+import { Box, Card, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { IconNavItem, RowNavItem } from './components/nav-item'
+import { FlexColumn } from '@/components/ui/layout/flexbox'
+import { useState } from 'react'
+
+const RowNav = () => {
+  return (
+    <>
+      <RowNavItem
+        href={'/app'}
+        title={<Typography variant="body1">Dashboard</Typography>}
+        icon={
+          <SpaceDashboardOutlinedIcon
+            sx={{
+              fontSize: '1.5rem',
+            }}
+          />
+        }
+      />
+    </>
+  )
+}
+
+const IconNav = () => {
+  return (
+    <>
+      <IconNavItem
+        href={'/app'}
+        icon={
+          <SpaceDashboardOutlinedIcon
+            sx={{
+              fontSize: '1.5rem',
+            }}
+          />
+        }
+      />
+    </>
+  )
+}
 
 export const MainNav = () => {
-  // const [navWidth, setNavWidth] = useState(0)
+  const theme = useTheme()
+  const isSm = useMediaQuery(theme.breakpoints.only('sm'))
 
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setIsClosed(window.innerWidth < 768)
-  //   }
-
-  //   window.addEventListener('resize', handleResize)
-  //   return () => window.removeEventListener('resize', handleResize)
-  // }, [])
+  const [currNav, setCurrNav] = useState('dashboard')
 
   return (
     <Card
       sx={{
-        width: { xs: 0, sm: 120, md: 240 },
+        width: { xs: 0, sm: 75, md: 240 },
         transition: 'width 0.3s',
-        overflow: 'hidden',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
         height: '100vh',
+        display: 'flex',
+        alignItems: 'start',
       }}
     >
-      <FlexColumn sx={{ padding: 2, height: '100%' }}>
-        <NavItem
-          href={'/app'}
-          title={<Typography variant="body1">Dashboard</Typography>}
-          icon={
-            <SpaceDashboardOutlinedIcon
-              sx={{
-                fontSize: '1.5rem',
-              }}
-            />
-          }
-        />
-        <FlexSpacer />
-        <Button
-          onClick={() => setIsClosed(!closed)}
-          sx={{ width: '100%', justifyContent: 'flex-start' }}
+      <FlexColumn
+        sx={{
+          padding: 2,
+        }}
+      >
+        <Box
+          sx={{
+            marginBottom: 2,
+          }}
         >
-          <Typography variant="body1">Close</Typography>
-        </Button>
+          <Typography variant="h6">Future Icon</Typography>
+        </Box>
+        {isSm ? <IconNav /> : <RowNav />}
       </FlexColumn>
     </Card>
   )
