@@ -19,7 +19,7 @@ then
     exit 0
 fi
 
-npm run prettier
+pnpm run prettier
 
 for file in $files
 do

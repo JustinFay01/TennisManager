@@ -10,6 +10,6 @@ prettify()
 # Start script
 prettify "Running pre-push lint"
 
-npm run lint
+pnpm run lint
 
 prettify "Lint done. Exiting."
