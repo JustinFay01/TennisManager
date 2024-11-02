@@ -1,8 +1,7 @@
+import { FlexColumn } from '@/components/ui/layout/flexbox'
 import SpaceDashboardOutlinedIcon from '@mui/icons-material/SpaceDashboardOutlined'
 import { Box, Card, Typography, useMediaQuery, useTheme } from '@mui/material'
 import { IconNavItem, RowNavItem } from './components/nav-item'
-import { FlexColumn } from '@/components/ui/layout/flexbox'
-import { useState } from 'react'
 
 const RowNav = () => {
   return (
@@ -42,8 +41,6 @@ const IconNav = () => {
 export const MainNav = () => {
   const theme = useTheme()
   const isSm = useMediaQuery(theme.breakpoints.only('sm'))
-
-  const [currNav, setCurrNav] = useState('dashboard')
 
   return (
     <Card
