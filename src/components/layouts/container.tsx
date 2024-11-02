@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box'
-import { WithChildren, WithChildrenAndSx } from '../props'
 import { Stack } from '@mui/material'
+import { WithChildren, WithChildrenAndSx } from '@/types/props'
 
 export const LayoutContainer = (props: WithChildren) => {
   const { children } = props

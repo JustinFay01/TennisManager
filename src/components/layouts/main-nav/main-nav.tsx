@@ -1,95 +1,74 @@
-import { FlexColumn, FlexRow } from '@/components/ui/layout/flexbox'
-import { NavLink } from '@/components/ui/nav-link'
-import { WithChildrenAndSx } from '@/types/props'
-import GroupIcon from '@mui/icons-material/Group'
-import HomeIcon from '@mui/icons-material/Home'
-import SportsTennisIcon from '@mui/icons-material/SportsTennis'
-import { Card, Link, Typography } from '@mui/material'
+import SpaceDashboardOutlinedIcon from '@mui/icons-material/SpaceDashboardOutlined'
+import { Box, Card, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { IconNavItem, RowNavItem } from './components/nav-item'
+import { FlexColumn } from '@/components/ui/layout/flexbox'
+import { useState } from 'react'
 
-interface NavItemProps extends WithChildrenAndSx {
-  href: string
-  title?: string
-}
-
-const StackedNavItem = ({ children, title, href, sx }: NavItemProps) => {
+const RowNav = () => {
   return (
-    <NavLink href={href} aria-label={title ?? 'Navigation Item'}>
-      <FlexColumn
-        sx={{
-          alignItems: 'center',
-          ...sx,
-        }}
-      >
-        {children}
-        {title && <span className="nav-title">{title}</span>}
-      </FlexColumn>
-    </NavLink>
+    <>
+      <RowNavItem
+        href={'/app'}
+        title={<Typography variant="body1">Dashboard</Typography>}
+        icon={
+          <SpaceDashboardOutlinedIcon
+            sx={{
+              fontSize: '1.5rem',
+            }}
+          />
+        }
+      />
+    </>
   )
 }
 
-const RowNavItem = ({ children, href, sx }: NavItemProps) => {
+const IconNav = () => {
   return (
-    <Link
-      href={href}
-      sx={{
-        textDecoration: 'none',
-        color: 'inherit',
-        '&:hover': {
-          textDecoration: 'none',
-          color: 'inherit',
-        },
-        ...sx,
-      }}
-    >
-      <FlexRow
-        sx={{
-          gap: 1,
-          alignItems: 'center',
-        }}
-      >
-        {children}
-      </FlexRow>
-    </Link>
-  )
-}
-
-export const FloatingNav = () => {
-  return (
-    <Card>
-      <FlexColumn>
-        <RowNavItem href={'/app'}>
-          <HomeIcon fontSize="large" />
-          <Typography variant="h6">Home</Typography>
-        </RowNavItem>
-        <RowNavItem href={'/app/customers'}>
-          <GroupIcon fontSize="large" />
-          <Typography variant="h6">Customers</Typography>
-        </RowNavItem>
-        <RowNavItem href={'/app/schedule'}>
-          <SportsTennisIcon fontSize="large" />
-          <Typography variant="h6">Schedule</Typography>
-        </RowNavItem>
-      </FlexColumn>
-    </Card>
+    <>
+      <IconNavItem
+        href={'/app'}
+        icon={
+          <SpaceDashboardOutlinedIcon
+            sx={{
+              fontSize: '1.5rem',
+            }}
+          />
+        }
+      />
+    </>
   )
 }
 
 export const MainNav = () => {
+  const theme = useTheme()
+  const isSm = useMediaQuery(theme.breakpoints.only('sm'))
+
+  const [currNav, setCurrNav] = useState('dashboard')
+
   return (
-    <FlexColumn
+    <Card
       sx={{
-        gap: 2,
+        width: { xs: 0, sm: 75, md: 240 },
+        transition: 'width 0.3s',
+        height: '100vh',
+        display: 'flex',
+        alignItems: 'start',
       }}
     >
-      <StackedNavItem href={'/app'} title="Home">
-        <HomeIcon fontSize="large" />
-      </StackedNavItem>
-      <StackedNavItem href={'/app/customers'} title="Customers">
-        <GroupIcon fontSize="large" />
-      </StackedNavItem>
-      <StackedNavItem href={'/app/schedule'} title="Schedule">
-        <SportsTennisIcon fontSize="large" />
-      </StackedNavItem>
-    </FlexColumn>
+      <FlexColumn
+        sx={{
+          padding: 2,
+        }}
+      >
+        <Box
+          sx={{
+            marginBottom: 2,
+          }}
+        >
+          <Typography variant="h6">Future Icon</Typography>
+        </Box>
+        {isSm ? <IconNav /> : <RowNav />}
+      </FlexColumn>
+    </Card>
   )
 }

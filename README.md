@@ -16,3 +16,5 @@
 ~~1. Users in API~~
 2. Axios Check In function after Auth Login
 3. Customers Table with Profile Pictures
+
+1. Need a way to be DRY for Row and Icon Nav Items
